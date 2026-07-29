@@ -1,0 +1,38 @@
+[
+  {
+    "id": "doador_001",
+    "nome": "Pingo Doce - Sá da Bandeira",
+    "tipo": "Supermercado",
+    "morada": "Rua de Sá da Bandeira 347, 4000-435 Porto",
+    "lat": 41.1492,
+    "lon": -8.6067,
+    "contacto": "+351 220 000 111"
+  },
+  {
+    "id": "doador_002",
+    "nome": "Confeitaria do Bolhão",
+    "tipo": "Padaria/Pastelaria",
+    "morada": "Rua Formosa 339, 4000-252 Porto",
+    "lat": 41.1487,
+    "lon": -8.6061,
+    "contacto": "+351 222 001 222"
+  },
+  {
+    "id": "doador_003",
+    "nome": "Mercado do Bolhão",
+    "tipo": "Mercado Municipal / Frescos",
+    "morada": "Rua Formosa 214, 4000-214 Porto",
+    "lat": 41.1485,
+    "lon": -8.6074,
+    "contacto": "+351 223 324 094"
+  },
+  {
+    "id": "doador_004",
+    "nome": "Abadia do Porto",
+    "tipo": "Restaurante",
+    "morada": "Rua do Ateneu Comercial do Porto 22, 4000-380 Porto",
+    "lat": 41.1468,
+    "lon": -8.6072,
+    "contacto": "+351 222 008 757"
+  }
+]

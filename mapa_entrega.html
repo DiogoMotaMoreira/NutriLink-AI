@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7e0d2c51649baea60316973f23876de1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7e0d2c51649baea60316973f23876de1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7e0d2c51649baea60316973f23876de1 = L.map(
+                "map_7e0d2c51649baea60316973f23876de1",
+                {
+                    center: [41.14985, -8.61935],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c1d835ae264717a26404c3be4f3503e3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c1d835ae264717a26404c3be4f3503e3.addTo(map_7e0d2c51649baea60316973f23876de1);
+        
+    
+            var marker_91d6e32d8e9bb9bc63fb7ee44488e812 = L.marker(
+                [41.1492, -8.6067],
+                {
+}
+            ).addTo(map_7e0d2c51649baea60316973f23876de1);
+        
+    
+            var icon_197759ddf44544db14544a6e61d01ccd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "store",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_095cf70699ba257ef7f2e6ff5774542a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4018360d9482ab1824fd3764f92d311 = $(`<div id="html_e4018360d9482ab1824fd3764f92d311" style="width: 100.0%; height: 100.0%;"><b>Doador:</b> Pingo Doce - Sá da Bandeira</div>`)[0];
+                popup_095cf70699ba257ef7f2e6ff5774542a.setContent(html_e4018360d9482ab1824fd3764f92d311);
+            
+        
+
+        marker_91d6e32d8e9bb9bc63fb7ee44488e812.bindPopup(popup_095cf70699ba257ef7f2e6ff5774542a)
+        ;
+
+        
+    
+    
+                marker_91d6e32d8e9bb9bc63fb7ee44488e812.setIcon(icon_197759ddf44544db14544a6e61d01ccd);
+            
+    
+            var marker_ec9c55b822153a979598b7c3c3432c05 = L.marker(
+                [41.1505, -8.632],
+                {
+}
+            ).addTo(map_7e0d2c51649baea60316973f23876de1);
+        
+    
+            var icon_fd7b67c8d1a468bf9f24f8309f5a24bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3808be793d569d44555d10eeccbdc856 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6949c7037ba4b78a8c651f1a8adbafc8 = $(`<div id="html_6949c7037ba4b78a8c651f1a8adbafc8" style="width: 100.0%; height: 100.0%;"><b>Destino:</b> Refood Foz do Douro / Porto Centro</div>`)[0];
+                popup_3808be793d569d44555d10eeccbdc856.setContent(html_6949c7037ba4b78a8c651f1a8adbafc8);
+            
+        
+
+        marker_ec9c55b822153a979598b7c3c3432c05.bindPopup(popup_3808be793d569d44555d10eeccbdc856)
+        ;
+
+        
+    
+    
+                marker_ec9c55b822153a979598b7c3c3432c05.setIcon(icon_fd7b67c8d1a468bf9f24f8309f5a24bf);
+            
+    
+            var poly_line_0a1e7b1a7213c60cde87c52df68a44a9 = L.polyline(
+                [[41.1492, -8.6067], [41.1505, -8.632]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_7e0d2c51649baea60316973f23876de1);
+        
+    
+            var marker_8d4bc6b12a05ff11dd906c2193a9e40a = L.marker(
+                [41.14985, -8.61935],
+                {
+}
+            ).addTo(map_7e0d2c51649baea60316973f23876de1);
+        
+    
+            var icon_33645113db2ba8978ab230bbc078dadd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "motorcycle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_020e6cdc617077432d719e07c0b7ea1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb25163391d40a7443766eb9823308a6 = $(`<div id="html_bb25163391d40a7443766eb9823308a6" style="width: 100.0%; height: 100.0%;"><b>Estafeta em Trânsito:</b> Estafeta Padrão</div>`)[0];
+                popup_020e6cdc617077432d719e07c0b7ea1a.setContent(html_bb25163391d40a7443766eb9823308a6);
+            
+        
+
+        marker_8d4bc6b12a05ff11dd906c2193a9e40a.bindPopup(popup_020e6cdc617077432d719e07c0b7ea1a)
+        ;
+
+        
+    
+    
+                marker_8d4bc6b12a05ff11dd906c2193a9e40a.setIcon(icon_33645113db2ba8978ab230bbc078dadd);
+            
+</script>
+</html>

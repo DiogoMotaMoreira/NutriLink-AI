@@ -1,0 +1,35 @@
+[
+  {
+    "id": "estafeta_01",
+    "nome": "Rui Silva",
+    "veiculo": "Mota elétrica",
+    "matricula": "22-AB-34",
+    "capacidade_carga": "Pequena/Média (Até 15 kg)",
+    "posicao_atual": {
+      "lat": 41.1478,
+      "lon": -8.6110
+    }
+  },
+  {
+    "id": "estafeta_02",
+    "nome": "Ana Marta",
+    "veiculo": "Carrinha Comercial",
+    "matricula": "88-ZX-12",
+    "capacidade_carga": "Grande (Caixas e Paletes)",
+    "posicao_atual": {
+      "lat": 41.1530,
+      "lon": -8.6010
+    }
+  },
+  {
+    "id": "estafeta_03",
+    "nome": "Tiago Gonçalves",
+    "veiculo": "Bicicleta de Carga",
+    "matricula": "N/A",
+    "capacidade_carga": "Pequena (Sacas de pão / fruta)",
+    "posicao_atual": {
+      "lat": 41.1450,
+      "lon": -8.6080
+    }
+  }
+]

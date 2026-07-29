@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ipss_001",
+    "nome": "CASA - Centro de Apoio ao Sem Abrigo (Delegação do Porto)",
+    "perfil": "Centro de apoio a sem-abrigo e famílias em carência extrema na área do Porto.",
+    "publico_alvo": ["sem-abrigo", "famílias em carência extrema"],
+    "restricoes_alimentares": [],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 250,
+    "morada": "Rua de Cabo Simão, Vila Nova de Gaia / Porto",
+    "lat": 41.1378,
+    "lon": -8.6095,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a domingo", "inicio": "18:00", "fim": "22:00"}
+    ],
+    "instrucoes_rececao": "Tocar à campainha na entrada lateral de receção de bens."
+  },
+  {
+    "id": "ipss_002",
+    "nome": "Refood Foz do Douro / Porto Centro",
+    "perfil": "Apoia famílias carenciadas e idosos isolados com refeições confecionadas.",
+    "publico_alvo": ["famílias carenciadas", "idosos isolados"],
+    "restricoes_alimentares": ["marisco"],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 120,
+    "morada": "Rua de São Bartolomeu, Porto",
+    "lat": 41.1505,
+    "lon": -8.6320,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sexta", "inicio": "17:00", "fim": "21:00"}
+    ],
+    "instrucoes_rececao": "Entregar no centro de operações à equipa de voluntários."
+  },
+  {
+    "id": "ipss_003",
+    "nome": "Centro Social Paroquial de Santo Ildefonso",
+    "perfil": "Apoio a crianças em idade escolar, idosos e famílias carenciadas da freguesia.",
+    "publico_alvo": ["crianças em idade escolar", "idosos", "famílias do bairro"],
+    "restricoes_alimentares": ["amendoim", "frutos secos"],
+    "capacidade_refrigeracao": false,
+    "refeicoes_diarias": 80,
+    "morada": "Rua de Fernandes Tomás 540, 4000-211 Porto",
+    "lat": 41.1498,
+    "lon": -8.6045,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sexta", "inicio": "09:00", "fim": "16:00"}
+    ],
+    "instrucoes_rececao": "Entregar na receção principal. Contactar a D. Maria."
+  },
+  {
+    "id": "ipss_004",
+    "nome": "Cozinha Solidária da Baixa (Associação Coração da Cidade)",
+    "perfil": "Refeitório social para população sem-abrigo e idosos com parca reforma.",
+    "publico_alvo": ["sem-abrigo", "idosos com parca reforma"],
+    "restricoes_alimentares": [],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 180,
+    "morada": "Rua das Flores 105, 4050-265 Porto",
+    "lat": 41.1444,
+    "lon": -8.6138,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sábado", "inicio": "11:00", "fim": "15:00"}
+    ],
+    "instrucoes_rececao": "Entrada pela porta de serviço das traseiras para descarga de refeições."
+  }
+]
