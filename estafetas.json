@@ -31,5 +31,49 @@
       "lat": 41.1450,
       "lon": -8.6080
     }
+  },
+  {
+    "id": "estafeta_04",
+    "nome": "Sofia Pereira",
+    "veiculo": "Carrinha Refrigerada",
+    "matricula": "55-CD-78",
+    "capacidade_carga": "Grande (Caixas refrigeradas e congelados)",
+    "posicao_atual": {
+      "lat": 41.1600,
+      "lon": -8.6300
+    }
+  },
+  {
+    "id": "estafeta_05",
+    "nome": "Miguel Santos",
+    "veiculo": "Mota elétrica",
+    "matricula": "33-EF-91",
+    "capacidade_carga": "Pequena/Média (Até 15 kg)",
+    "posicao_atual": {
+      "lat": 41.1420,
+      "lon": -8.6150
+    }
+  },
+  {
+    "id": "estafeta_06",
+    "nome": "Beatriz Lopes",
+    "veiculo": "Carro elétrico",
+    "matricula": "44-GH-56",
+    "capacidade_carga": "Média (Até 50 kg)",
+    "posicao_atual": {
+      "lat": 41.1555,
+      "lon": -8.5980
+    }
+  },
+  {
+    "id": "estafeta_07",
+    "nome": "Carlos Ferreira",
+    "veiculo": "Bicicleta de Carga",
+    "matricula": "N/A",
+    "capacidade_carga": "Pequena (Sacas e caixas leves)",
+    "posicao_atual": {
+      "lat": 41.1500,
+      "lon": -8.6200
+    }
   }
 ]

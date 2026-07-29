@@ -34,5 +34,104 @@
     "lat": 41.1468,
     "lon": -8.6072,
     "contacto": "+351 222 008 757"
+  },
+  {
+    "id": "doador_005",
+    "nome": "Continente Bom Dia - Campo 24 de Agosto",
+    "tipo": "Supermercado",
+    "morada": "Campo 24 de Agosto, 4300-096 Porto",
+    "lat": 41.1505,
+    "lon": -8.5985,
+    "contacto": "+351 226 151 300"
+  },
+  {
+    "id": "doador_006",
+    "nome": "Lidl - Rua Joaquim Bastos",
+    "tipo": "Supermercado",
+    "morada": "Rua Joaquim Bastos 182-200, 4200-356 Porto",
+    "lat": 41.1580,
+    "lon": -8.5950,
+    "contacto": "+351 800 204 504"
+  },
+  {
+    "id": "doador_007",
+    "nome": "Aldi - Ramalde",
+    "tipo": "Supermercado",
+    "morada": "Rua Manuel Pinto de Azevedo 7, 4100-320 Porto",
+    "lat": 41.1635,
+    "lon": -8.6375,
+    "contacto": "+351 707 220 022"
+  },
+  {
+    "id": "doador_008",
+    "nome": "Restaurante Líder",
+    "tipo": "Restaurante",
+    "morada": "Alameda Eça de Queirós 120/130, 4200-191 Porto",
+    "lat": 41.1630,
+    "lon": -8.5947,
+    "contacto": "+351 225 023 019"
+  },
+  {
+    "id": "doador_009",
+    "nome": "Adega São Nicolau",
+    "tipo": "Restaurante",
+    "morada": "Rua de São Nicolau 1, 4050-560 Porto",
+    "lat": 41.1408,
+    "lon": -8.6148,
+    "contacto": "+351 222 008 232"
+  },
+  {
+    "id": "doador_010",
+    "nome": "O Buraco",
+    "tipo": "Restaurante",
+    "morada": "Rua do Bolhão 95, 4000-111 Porto",
+    "lat": 41.1490,
+    "lon": -8.6050,
+    "contacto": "+351 222 004 549"
+  },
+  {
+    "id": "doador_011",
+    "nome": "Minipreço - Largo dos Lóios",
+    "tipo": "Supermercado",
+    "morada": "Largo dos Lóios 46, 4050-342 Porto",
+    "lat": 41.1455,
+    "lon": -8.6102,
+    "contacto": "+351 222 086 200"
+  },
+  {
+    "id": "doador_012",
+    "nome": "Padaria Ribeiro",
+    "tipo": "Padaria/Pastelaria",
+    "morada": "Praça Guilherme Gomes Fernandes 21, 4050-293 Porto",
+    "lat": 41.1460,
+    "lon": -8.6153,
+    "contacto": "+351 222 005 067"
+  },
+  {
+    "id": "doador_013",
+    "nome": "InterContinental Porto - Palácio das Cardosas",
+    "tipo": "Hotel",
+    "morada": "Praça da Liberdade 25, 4000-322 Porto",
+    "lat": 41.1475,
+    "lon": -8.6108,
+    "contacto": "+351 220 035 600"
+  },
+  {
+    "id": "doador_014",
+    "nome": "Casa Nanda",
+    "tipo": "Restaurante",
+    "morada": "Rua da Alegria 394, 4000-036 Porto",
+    "lat": 41.1530,
+    "lon": -8.6000,
+    "contacto": "+351 225 370 575"
+  },
+  {
+    "id": "doador_015",
+    "nome": "Continente Bom Dia - Via Catarina",
+    "tipo": "Supermercado",
+    "morada": "Via Catarina Shopping, Rua de Santa Catarina 312, 4000-442 Porto",
+    "lat": 41.1480,
+    "lon": -8.6055,
+    "contacto": "+351 226 151 300"
   }
 ]

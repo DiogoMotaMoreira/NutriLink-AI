@@ -2,14 +2,14 @@
   {
     "id": "ipss_001",
     "nome": "CASA - Centro de Apoio ao Sem Abrigo (Delegação do Porto)",
-    "perfil": "Centro de apoio a sem-abrigo e famílias em carência extrema na área do Porto.",
+    "perfil": "Centro de apoio a sem-abrigo e famílias em carência extrema na área do Porto. Distribuição de refeições quentes e cabazes alimentares.",
     "publico_alvo": ["sem-abrigo", "famílias em carência extrema"],
     "restricoes_alimentares": [],
     "capacidade_refrigeracao": true,
     "refeicoes_diarias": 250,
-    "morada": "Rua de Cabo Simão, Vila Nova de Gaia / Porto",
-    "lat": 41.1378,
-    "lon": -8.6095,
+    "morada": "Rua João Espregueira Mendes 125, 4350-307 Porto",
+    "lat": 41.1520,
+    "lon": -8.6280,
     "janelas_horarias_entrega": [
       {"dia_semana": "segunda a domingo", "inicio": "18:00", "fim": "22:00"}
     ],
@@ -17,13 +17,13 @@
   },
   {
     "id": "ipss_002",
-    "nome": "Refood Foz do Douro / Porto Centro",
-    "perfil": "Apoia famílias carenciadas e idosos isolados com refeições confecionadas.",
+    "nome": "Refood Foz do Douro",
+    "perfil": "Apoia famílias carenciadas e idosos isolados com refeições confecionadas. Recolhe excedentes de restaurantes e supermercados.",
     "publico_alvo": ["famílias carenciadas", "idosos isolados"],
     "restricoes_alimentares": ["marisco"],
     "capacidade_refrigeracao": true,
     "refeicoes_diarias": 120,
-    "morada": "Rua de São Bartolomeu, Porto",
+    "morada": "Rua de São Bartolomeu, 4150-696 Porto",
     "lat": 41.1505,
     "lon": -8.6320,
     "janelas_horarias_entrega": [
@@ -34,7 +34,7 @@
   {
     "id": "ipss_003",
     "nome": "Centro Social Paroquial de Santo Ildefonso",
-    "perfil": "Apoio a crianças em idade escolar, idosos e famílias carenciadas da freguesia.",
+    "perfil": "Apoio a crianças em idade escolar, idosos e famílias carenciadas da freguesia de Santo Ildefonso.",
     "publico_alvo": ["crianças em idade escolar", "idosos", "famílias do bairro"],
     "restricoes_alimentares": ["amendoim", "frutos secos"],
     "capacidade_refrigeracao": false,
@@ -50,7 +50,7 @@
   {
     "id": "ipss_004",
     "nome": "Cozinha Solidária da Baixa (Associação Coração da Cidade)",
-    "perfil": "Refeitório social para população sem-abrigo e idosos com parca reforma.",
+    "perfil": "Refeitório social para população sem-abrigo e idosos com parca reforma na zona da Baixa do Porto.",
     "publico_alvo": ["sem-abrigo", "idosos com parca reforma"],
     "restricoes_alimentares": [],
     "capacidade_refrigeracao": true,
@@ -62,5 +62,103 @@
       {"dia_semana": "segunda a sábado", "inicio": "11:00", "fim": "15:00"}
     ],
     "instrucoes_rececao": "Entrada pela porta de serviço das traseiras para descarga de refeições."
+  },
+  {
+    "id": "ipss_005",
+    "nome": "Refood Bonfim",
+    "perfil": "Núcleo Refood no Bonfim. Recolhe excedentes alimentares e distribui refeições a famílias e idosos da freguesia.",
+    "publico_alvo": ["famílias carenciadas", "idosos", "sem-abrigo"],
+    "restricoes_alimentares": [],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 90,
+    "morada": "Rua de Santos Pousada 1087, 4000-075 Porto",
+    "lat": 41.1520,
+    "lon": -8.5945,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sexta", "inicio": "18:30", "fim": "21:30"}
+    ],
+    "instrucoes_rececao": "Entregar no centro de operações. Voluntários recebem no horário indicado."
+  },
+  {
+    "id": "ipss_006",
+    "nome": "Porta Solidária (Paróquia de Cedofeita)",
+    "perfil": "Serviço diário de refeição quente e apoio de emergência a pessoas em situação de vulnerabilidade.",
+    "publico_alvo": ["sem-abrigo", "famílias em carência extrema", "idosos"],
+    "restricoes_alimentares": [],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 150,
+    "morada": "Rua de Vilar 130, 4050-625 Porto",
+    "lat": 41.1478,
+    "lon": -8.6230,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a domingo", "inicio": "10:00", "fim": "14:00"}
+    ],
+    "instrucoes_rececao": "Entregar na porta lateral junto à sacristia."
+  },
+  {
+    "id": "ipss_007",
+    "nome": "Centro Social da Paróquia da Areosa",
+    "perfil": "Cantina social com fornecimento de refeições para pessoas e famílias economicamente desfavorecidas da Areosa.",
+    "publico_alvo": ["famílias carenciadas", "idosos", "crianças em idade escolar"],
+    "restricoes_alimentares": ["glúten"],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 100,
+    "morada": "Travessa da Areosa 75, 4200-087 Porto",
+    "lat": 41.1710,
+    "lon": -8.5935,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sexta", "inicio": "08:30", "fim": "17:00"}
+    ],
+    "instrucoes_rececao": "Entregar na receção do centro social. Contactar o Sr. António."
+  },
+  {
+    "id": "ipss_008",
+    "nome": "Restaurante Solidário da Boavista (Câmara do Porto)",
+    "perfil": "Restaurante social municipal para população em situação de pobreza e exclusão social na zona da Boavista.",
+    "publico_alvo": ["sem-abrigo", "famílias em carência extrema"],
+    "restricoes_alimentares": [],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 200,
+    "morada": "Avenida da Boavista 1203, 4100-130 Porto",
+    "lat": 41.1585,
+    "lon": -8.6340,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sábado", "inicio": "10:00", "fim": "14:00"},
+      {"dia_semana": "segunda a sábado", "inicio": "17:30", "fim": "20:30"}
+    ],
+    "instrucoes_rececao": "Dirigir-se à entrada de serviço. Refeições entregues ao responsável de turno."
+  },
+  {
+    "id": "ipss_009",
+    "nome": "Santa Casa da Misericórdia do Porto",
+    "perfil": "Histórica instituição de apoio social no Porto. Apoia idosos, famílias carenciadas e crianças com refeitório e apoio alimentar.",
+    "publico_alvo": ["idosos", "famílias carenciadas", "crianças em idade escolar"],
+    "restricoes_alimentares": ["lactose"],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 300,
+    "morada": "Rua das Flores 5, 4050-265 Porto",
+    "lat": 41.1440,
+    "lon": -8.6130,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sexta", "inicio": "08:00", "fim": "18:00"}
+    ],
+    "instrucoes_rececao": "Entregar no armazém de logística na ala nascente. Contactar gabinete social."
+  },
+  {
+    "id": "ipss_010",
+    "nome": "Banco Alimentar Contra a Fome - Porto",
+    "perfil": "Central de recolha e redistribuição de alimentos a IPSS do distrito do Porto. Aceita doações em grande volume.",
+    "publico_alvo": ["famílias carenciadas", "sem-abrigo", "idosos", "crianças em idade escolar"],
+    "restricoes_alimentares": [],
+    "capacidade_refrigeracao": true,
+    "refeicoes_diarias": 500,
+    "morada": "Rua do Freixo 1014, 4300-220 Porto",
+    "lat": 41.1430,
+    "lon": -8.5830,
+    "janelas_horarias_entrega": [
+      {"dia_semana": "segunda a sexta", "inicio": "09:00", "fim": "17:00"},
+      {"dia_semana": "sábado", "inicio": "09:00", "fim": "13:00"}
+    ],
+    "instrucoes_rececao": "Acesso pelo portão do armazém. Descargas apenas com agendamento prévio."
   }
 ]
