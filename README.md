@@ -1,130 +1,111 @@
-# Relatório de Especificação do Projeto: **ZeroWaste-Crew**
+# 🥗 NutriLink-AI
+
+**NutriLink-AI** is an experimental multi-agent system built to evaluate autonomous AI agent orchestration in real-world food rescue logistics. 
+
+The project automates the sequential pipeline of surplus food triage, allergen filtering, beneficiary institution matching, and dynamic courier routing across the city of Porto.
+
+## 📺 Demonstration
+
+![NutriLink-AI Demo](demo.webm)
+
+> ⚠️ **Disclaimer:** This project was developed purely as a proof of concept and practice run for the **HackerRank Orchestrate Hackathon** (August 1st, 2026). To accelerate development, UI components, addresses, and geographic coordinates were AI-generated and may not reflect accurate real-world locations.
 
 ---
 
-## 1. Contexto e Enquadramento do Problema
+## 🚀 Key Features
 
-### O Problema do Mundo Real
-
-O desperdício alimentar em estabelecimentos comerciais (supermercados, restaurantes, padarias e produtores) ocorre maioritariamente devido à **falta de tempo e de coordenação logística** na janela crítica antes do fecho do estabelecimento ou do prazo de validade dos produtos.
-
-Atualmente, a doação de excedentes sofre dos seguintes estrangulamentos:
-
-* **Inoperacionalidade manual:** Processos lentos e baseados na intervenção humana para registar, aprovar e agendar entregas.
-* **Riscos de segurança alimentar:** Falta de rastreio de alérgenos e de condições de conservação (ex.: cadeia do frio).
-* **Fricção logística:** Dificuldade em alocar rapidamente transportes adequados para pequenos volumes num curto espaço de tempo.
-
-### A Visão da Solução
-
-Desenvolver um **Sistema Multiagente Autónomo (Orchestrator-Workers)** que automatize 100% do processo de resgate alimentar. O sistema recebe um alerta de excedente e executa de forma assíncrona, sem intervenção humana, a validação de segurança, a seleção da instituição beneficiária e a atribuição da logística de transporte.
+* **Automated Food Triage:** Analyzes food items against target audiences to approve/reject suitability, detect allergens, and flag handling requirements.
+* **Smart Beneficiary Matching:** Filters local IPSS/institutions based on dietary restrictions and matches food donations to the most appropriate receiver.
+* **Logistics & Fleet Dispatching:** Dynamically assigns available couriers based on vehicle type and cargo capacity.
+* **Real-Time Interactive Map:** Renders live, smooth vehicle movement along real road networks (via OSRM) using Streamlit and Folium.
+* **Multi-Delivery Support:** Manages multiple concurrent active orders and courier routes simultaneously.
 
 ---
 
-## 2. Objetivos Principais
+## 🛠️ Tech Stack
 
-* **Zero Intervenção Humana (100% Automático):** Eliminar a necessidade de aprovação manual (*Human-in-the-loop*) para garantir respostas em minutos.
-* **Segurança e Conformidade Alimentar:** Garantir que nenhum produto com risco de alérgenos ou contaminação seja entregue a beneficiários vulneráveis.
-* **Otimização de Rotas e Recursos:** Casar o volume do excedente com o tipo de veículo adequado (ex.: mota para volumes pequenos, carro para grandes volumes).
-* **Rastreabilidade e Estado Centralizado:** Manter um registo auditável (*Blackboard*) com todas as etapas e decisões tomadas durante a missão.
+* **Language:** Python 3.12+
+* **AI & Multi-Agent Framework:** Google Gemini API (`gemini-3.5-flash-lite` / `gemini-2.5-flash`), LangChain
+* **Structured Data Validation:** Pydantic
+* **Dashboard UI & Mapping:** Streamlit, Folium (Leaflet.js)
+* **Routing Engine:** OSRM (Open Source Routing Machine API)
 
 ---
 
-## 3. Requisitos Funcionais
+## 🤖 Multi-Agent Workflow
 
 ```
-[ Input Global do Doador ]
-            │
-            ▼
-┌─────────────────────────┐
-│   ORCHESTRATOR (Cérebro)│
-└───────────┬─────────────┘
-            │
-            ├───► 1. Worker de Triagem (Valida Segurança & Alérgenos)
-            │      └─► Reprovado? Interrompe a missão.
-            │      └─► Aprovado? Avança para o passo 2.
-            │
-            ├───► 2. Worker Recetor (Casamento Social & IPSS)
-            │      └─► Seleciona local e horário de entrega.
-            │
-            └───► 3. Worker Logístico (Atribuição de Frota)
-                   └─► Aloca estafeta/veículo e ativa missão.
-
+[ Surplus Food Input ]
+          │
+          ▼
+┌───────────────────┐
+│  Agente 1:        │ ──(Rejeitado)──► [ Processo Terminado ]
+│  Triagem          │
+└─────────┬─────────┘
+          │ (Aprovado)
+          ▼
+┌───────────────────┐
+│  Agente 2:        │ ──► [ Filtra Alérgenos e Seleciona IPSS ]
+│  Matching IPSS    │
+└─────────┬─────────┘
+          │
+          ▼
+┌───────────────────┐
+│  Agente 3:        │ ──► [ Seleciona Estafeta & Calcula Rota OSRM ]
+│  Logística        │
+└─────────┬─────────┘
+          │
+          ▼
+[ Mapa Interativo em Tempo Real ]
 ```
 
-### RF-01: Receção e Estruturação do Input Global
+---
 
-* O sistema deve aceitar um *payload* contendo:
-* **Dados do Alimento:** Nome, tipo, descrição do rótulo e quantidade/volume.
-* **Dados Temporais:** Validade e horário de fecho do estabelecimento.
-* **Dados de Localização e Acesso:** Morada de recolha, condições de conservação (ex.: refrigerado/temperatura ambiente) e instruções de acesso ao local.
+## 📦 Installation & Setup
 
+### 1. Clone the repository
+```bash
+git clone https://github.com/DiogoMotaMoreira/NutriLink-AI.git
+cd NutriLink-AI
+```
 
+### 2. Create and activate a virtual environment
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
 
-### RF-02: Triagem e Auditoria de Segurança (Worker de Triagem)
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-* Analisar o produto quanto a prazos de validade e risco de contaminação.
-* Identificar e extrair automaticamente a lista de **alérgenos detetados**.
-* Definir os **cuidados de transporte** (ex.: necessidade de mala térmica).
-* Decidir se o produto é **Aprovado** ou **Rejeitado**.
-* *Critério de Paragem:* Se o produto for rejeitado, a missão deve ser interrompida imediatamente, registando o motivo.
+### 4. Configure Environment Variables
+Create a `.env` file in the root directory and add your Google Gemini API Key:
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+# or GEMINI_API_KEY=your_gemini_api_key_here
+```
 
-### RF-03: Alocação e Correspondência Social (Worker Recetor)
-
-* Cruzar os dados dos produtos aprovados com o perfil de instituições de solidariedade (IPSSs) e famílias vulneráveis.
-* Validar que as restrições alimentares da instituição parceira não colidem com os alérgenos identificados no produto.
-* Definir o **local de entrega**, a **janela horária** e as instruções de receção.
-
-### RF-04: Gestão e Atribuição Logística (Worker Logístico)
-
-* Determinar o tipo de veículo necessário com base no volume e nos cuidados de transporte.
-* Gerar/Atribuir automaticamente os dados do estafeta:
-* Nome e contacto.
-* Tipo de veículo, modelo e matrícula.
-* Instruções adicionais de transporte.
-
-
-* Alterar o estado da missão para `EM_TRANSITO`.
-
-### RF-05: Gestão de Estado Centralizado (Blackboard)
-
-* O sistema deve manter um objeto partilhado (*Blackboard*) que armazena a evolução dos dados ao longo do pipeline de execução.
+### 5. Run the Application
+```bash
+streamlit run app.py
+```
 
 ---
 
-## 4. Requisitos Não-Funcionais
-
-### RNF-01: Validação de Dados e Tipagem Estrita
-
-* Toda a comunicação entre agentes deve ser validada estruturalmente (ex.: através de esquemas Pydantic/JSON Schema) para evitar falhas em tempo de execução causadas por alucinações de modelos de linguagem.
-
-### RNF-02: Desempenho e Latência
-
-* O ciclo completo de processamento (desde a entrada do input até à atribuição do estafeta) não deve exceder **30 segundos**.
-
-### RNF-03: Desacoplamento de Configurações
-
-* As personas, objetivos e instruções de cada agente, assim como a definição das tarefas, devem estar isoladas em ficheiros de configuração (ex.: YAML/JSON), separando o comportamento do agente da lógica do código Python.
-
-### RNF-04: Robustez e Controlo de Erros
-
-* O Orchestrator deve gerir exceções em caso de respostas inválidas de um Worker, permitindo re-tentativas (retry mechanism) antes de cancelar a missão com estado de erro.
+## 🔮 Future Improvements
+Since this is an experimental prototype, there is plenty of room for enhancement:
+* Adding comprehensive nutritional and temperature-control metadata for food items.
+* Integrating real-world APIs for live traffic conditions and courier GPS.
+* Supporting dynamic multi-stop pickup and delivery route optimization.
 
 ---
 
-## 5. Requisitos de Testes e Validação do Sistema
+## 🤝 Contributing
+Contributions are welcome! Feel free to open an Issue or submit a Pull Request to help improve agent decision-making, UI features, or routing efficiency.
 
-Para validar a eficácia do sistema em ambiente de simulação, devem ser testados os seguintes cenários:
+---
 
-1. **Cenário de Sucesso (Happy Path):**
-* Input com alimentos frescos dentro da validade e sem conflitos graves.
-* *Resultado esperado:* Triagem aprovada $\rightarrow$ Recetor atribuído $\rightarrow$ Estafeta alocado $\rightarrow$ Estado: `EM_TRANSITO`.
-
-
-2. **Cenário de Rejeição por Segurança Alimentar:**
-* Input com produto fora da validade ou sem informação mínima de conservação.
-* *Resultado esperado:* Triagem rejeitada $\rightarrow$ Motivo registado no Blackboard $\rightarrow$ Processo interrompido sem acionar o Recetor ou Logística.
-
-
-3. **Cenário de Incompatibilidade de Alérgenos:**
-* Input com produto contendo vestígios de amendoim/glúten.
-* *Resultado esperado:* O Worker Recetor escolhe obrigatoriamente uma instituição sem restrições ou alertas para esses ingredientes.
+## 📄 License
+This project is open-source and available under the MIT License.
